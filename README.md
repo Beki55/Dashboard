@@ -21,6 +21,8 @@ EzyMetrics Dashboard is a responsive web application built with React.js and Tai
 
 ## Installation
 
+The project is also deployed on netlify and you can see it using this link : https://dashboard-beki.netlify.app/
+
 Follow these steps to set up the project locally on your machine:
 
 ### 1. Clone the Repository
