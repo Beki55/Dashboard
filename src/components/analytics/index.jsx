@@ -1,34 +1,61 @@
-// src/components/AnalyticsPage.js
+import 'chart.js/auto'; // Chart.js auto import
+import TrendChart from './TrenChart';
 
-import { Pie } from "react-chartjs-2";
-import dummyLeadsData from "../DummyData"; // Import your dummy data
+const Analytics = () => {
+  // Dummy Data for KPIs
+  const totalLeads = 150;
+  const conversionRate = 25; // in percentage
+  const averageResponseTime = 2.5; // in hours
+  const totalSales = 50000; // in dollars
 
-const AnalyticsPage = () => {
-  // Data for pie chart
-  const data = {
-    labels: dummyLeadsData.map((lead) => lead.leadName),
-    datasets: [
-      {
-        data: dummyLeadsData.map((lead) => lead.performanceMetric),
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      },
-    ],
-  };
+
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow">
-      <h2 className="text-lg font-bold mb-4">Analytics Overview</h2>
-      <div className="h-96">
+    <div className="analytics-section p-6 min-h-screen">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">Analytics Dashboard</h1>
+      <p className="text-gray-600 mb-4">
+        Welcome to the Analytics Dashboard. Here you can track key performance indicators (KPIs) related to your leads and sales. Monitor trends, assess performance, and make informed decisions.
+      </p>
+      
+      {/* KPI Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="p-4 bg-blue-500 shadow rounded-lg">
+          <h3 className="text-lg font-semibold text-white">Total Leads</h3>
+          <p className="text-2xl font-bold text-white">{totalLeads}</p>
+          <p className="text-slate-200">Total number of leads generated this month.</p>
+        </div>
+        <div className="p-4 bg-blue-500 shadow rounded-lg">
+          <h3 className="text-lg font-semibold text-white">Conversion Rate</h3>
+          <p className="text-2xl font-bold text-white">{conversionRate}%</p>
+          <p className="text-slate-200">Percentage of leads converted to sales.</p>
+        </div>
+        <div className="p-4 bg-blue-500 shadow rounded-lg">
+          <h3 className="text-lg font-semibold text-white">Average Response Time</h3>
+          <p className="text-2xl font-bold text-white">{averageResponseTime} hrs</p>
+          <p className="text-slate-200">Average time taken to respond to leads.</p>
+        </div>
+        <div className="p-4 bg-blue-500 shadow rounded-lg">
+          <h3 className="text-lg font-semibold text-white">Total Sales</h3>
+          <p className="text-2xl font-bold text-white">${totalSales}</p>
+          <p className="text-slate-200">Total revenue generated from all leads.</p>
+        </div>
+      </div>
 
-      <Pie data={data} />
+      <TrendChart />
+
+      {/* Lead Management Overview */}
+      <div className="bg-blue-500 shadow rounded-lg p-4">
+        <h2 className="text-2xl font-semibold text-white mb-4">Lead Management Overview</h2>
+        <p className="text-slate-300 mb-2">View and manage your leads effectively:</p>
+        <ul className="list-disc list-inside text-slate-300">
+          <li>Track lead status and follow-up actions.</li>
+          <li>Sort leads by source, status, or priority.</li>
+          <li>Utilize filters to find specific leads quickly.</li>
+        </ul>
+        <p className="mt-4 text-slate-300">Stay on top of your leads to maximize conversions and sales!</p>
       </div>
     </div>
   );
 };
 
-export default AnalyticsPage;
-// function AnalyticsPage() {
-//   return ( <div>kjncd</div> );
-// }
-
-// export default AnalyticsPage;
+export default Analytics;
