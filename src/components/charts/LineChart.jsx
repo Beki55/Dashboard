@@ -1,29 +1,38 @@
 import { Line } from 'react-chartjs-2';
-import dummyLeadsData from '../DummyData';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-const lineData = {
-  labels: dummyLeadsData.map((lead) => lead.date),
-  datasets: [
-    {
-      label: 'Sales Over Time',
-      data: dummyLeadsData.map((lead) => lead.sales),
-      fill: false,
-      backgroundColor: '#FF6384',
-      borderColor: '#FF6384',
+// Register the components needed for the line chart
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+const LineChart = () => {
+  // Example dummy data for the chart
+  const data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'Sales Over Time',
+        data: [3000, 2000, 5000, 7000, 4000, 6000],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Sales Performance',
+      },
     },
-  ],
-};
+  };
 
-const LineChart = () => (
-  <div className="bg-white p-4 rounded shadow mt-4 w-full max-w-md mx-auto"> {/* Responsive container */}
-    <h2 className="text-lg font-bold mb-4">Line Chart</h2>
-    <div style={{ position: 'relative', height: '300px' }}> {/* Fixed height for the chart */}
-      <Line data={lineData} options={{
-        responsive: true,
-        maintainAspectRatio: false,
-      }} />
-    </div>
-  </div>
-);
+  return <Line data={data} options={options} />;
+};
 
 export default LineChart;

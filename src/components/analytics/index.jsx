@@ -16,7 +16,7 @@ const AnalyticsPage = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow w-[700px]">
+    <div className="p-6 bg-white rounded-lg shadow">
       <h2 className="text-lg font-bold mb-4">Analytics Overview</h2>
       <div className="h-96">
 
@@ -27,3 +27,8 @@ const AnalyticsPage = () => {
 };
 
 export default AnalyticsPage;
+// function AnalyticsPage() {
+//   return ( <div>kjncd</div> );
+// }
+
+// export default AnalyticsPage;

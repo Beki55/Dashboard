@@ -43,3 +43,8 @@ const ReportGenerationPage = () => {
 };
 
 export default ReportGenerationPage;
+// function ReportGenerationPage() {
+//   return ( <div>kjncd</div> );
+// }
+
+// export default ReportGenerationPage;
