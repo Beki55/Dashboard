@@ -8,10 +8,8 @@ const Analytics = () => {
   const averageResponseTime = 2.5; // in hours
   const totalSales = 50000; // in dollars
 
-
-
   return (
-    <div className="analytics-section p-6 min-h-screen">
+    <div className="analytics-section p-4 md:p-6 lg:p-8 min-h-screen">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Analytics Dashboard</h1>
       <p className="text-gray-600 mb-4">
         Welcome to the Analytics Dashboard. Here you can track key performance indicators (KPIs) related to your leads and sales. Monitor trends, assess performance, and make informed decisions.
@@ -44,7 +42,7 @@ const Analytics = () => {
       <TrendChart />
 
       {/* Lead Management Overview */}
-      <div className="bg-blue-500 shadow rounded-lg p-4">
+      <div className="bg-blue-500 shadow rounded-lg p-4 mb-6">
         <h2 className="text-2xl font-semibold text-white mb-4">Lead Management Overview</h2>
         <p className="text-slate-300 mb-2">View and manage your leads effectively:</p>
         <ul className="list-disc list-inside text-slate-300">

@@ -65,7 +65,6 @@ const ReportGeneration = () => {
       doc.text(`Average Response Time: ${reportMetrics.averageResponseTime} hrs`, 14, 50);
       doc.text('Sales Trends (Last 6 Months):', 14, 60);
 
-      // Prepare sales data for the table
       const salesData = [
         { Month: 'Jan', Sales: 10000 },
         { Month: 'Feb', Sales: 15000 },
@@ -83,7 +82,6 @@ const ReportGeneration = () => {
 
       doc.save('report.pdf');
     } else {
-      // Generate CSV report
       const csvData = [
         ['Metric', 'Value'],
         ['Total Leads', reportMetrics.totalLeads],
@@ -102,15 +100,12 @@ const ReportGeneration = () => {
         { Month: 'Jun', Sales: 25000 },
       ];
 
-      // Append sales data to CSV
       csvData.push(['Month', 'Sales']);
       salesData.forEach(item => {
         csvData.push([item.Month, item.Sales]);
       });
 
       const csvContent = csvData.map(row => row.join(',')).join('\n');
-
-      // Create a Blob and trigger download
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const link = document.createElement('a');
       const url = URL.createObjectURL(blob);
@@ -131,22 +126,22 @@ const ReportGeneration = () => {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div className="p-4 bg-blue-500 shadow rounded-lg">
+        <div className="p-4 bg-blue-500 shadow rounded-lg flex flex-col">
           <h3 className="text-lg font-semibold text-white">Total Leads</h3>
           <p className="text-2xl font-bold text-white">{reportMetrics.totalLeads}</p>
           <p className="text-slate-200">Total number of leads generated.</p>
         </div>
-        <div className="p-4 bg-blue-500 shadow rounded-lg">
+        <div className="p-4 bg-blue-500 shadow rounded-lg flex flex-col">
           <h3 className="text-lg font-semibold text-white">Total Sales</h3>
           <p className="text-2xl font-bold text-white">${reportMetrics.totalSales}</p>
           <p className="text-slate-200">Total revenue generated from leads.</p>
         </div>
-        <div className="p-4 bg-blue-500 shadow rounded-lg">
+        <div className="p-4 bg-blue-500 shadow rounded-lg flex flex-col">
           <h3 className="text-lg font-semibold text-white">Conversion Rate</h3>
           <p className="text-2xl font-bold text-white">{reportMetrics.conversionRate.toFixed(2)}%</p>
           <p className="text-slate-200">Percentage of leads converted to sales.</p>
         </div>
-        <div className="p-4 bg-blue-500 shadow rounded-lg">
+        <div className="p-4 bg-blue-500 shadow rounded-lg flex flex-col">
           <h3 className="text-lg font-semibold text-white">Avg Response Time</h3>
           <p className="text-2xl font-bold text-white">{reportMetrics.averageResponseTime} hrs</p>
           <p className="text-slate-200">Average time taken to respond to leads.</p>
@@ -162,7 +157,7 @@ const ReportGeneration = () => {
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Generate Your Report</h2>
         <p className="text-gray-600 mb-2">Select the type of report you wish to generate:</p>
         <select
-          className="p-2 border border-gray-300 rounded mb-4"
+          className="p-2 border border-gray-300 rounded mb-4 w-full md:w-72"
           value={reportType}
           onChange={handleReportTypeChange}
         >
@@ -171,7 +166,7 @@ const ReportGeneration = () => {
         </select>
         <div>
           <button
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full md:w-72"
             onClick={handleGenerateReport}
           >
             Generate Report

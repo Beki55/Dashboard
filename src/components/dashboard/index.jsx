@@ -4,12 +4,7 @@ import SalesDataChart from "./SalesDataChart";
 import LeadManagement from "./LeadManagement";
 import dummyLeadsData from "../DummyData"; // Import dummy data
 import LineChart from "../charts/LineChart";
-import {
-  FaChartLine,
-  FaDollarSign,
-  FaUserCheck,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaChartLine, FaDollarSign, FaUserCheck, FaMapMarkerAlt } from "react-icons/fa";
 import MetricsCard from "./Metrics";
 // import ErrorBoundary from "./ErrorBoundary";
 
@@ -87,7 +82,7 @@ const Dashboard = () => {
         </div>
 
         {/* Lead Management and Performance Section */}
-        <div className="flex p-6">
+        <div className="flex flex-col lg:flex-row p-6 gap-6">
           {/* Lead Management Section */}
           <div className="flex-1">
             <h2 className="text-lg font-bold mb-4">Lead Management</h2>

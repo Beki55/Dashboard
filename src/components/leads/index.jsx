@@ -32,7 +32,7 @@ const LeadMetrics = () => {
   };
 
   return (
-    <div className="max-w-full py-6">
+    <div className="max-w-full py-6 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-semibold mb-4 text-gray-800">
         Lead Management Dashboard
       </h1>
@@ -42,7 +42,7 @@ const LeadMetrics = () => {
       </p>
 
       {/* Metrics Section using Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <MetricsCard
           icon={
             <div className="text-green-600 text-3xl">
@@ -141,7 +141,7 @@ const LeadMetrics = () => {
         <p className="mb-6 text-gray-600">
           Click on a lead below for detailed insights and performance metrics.
         </p>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {dummyLeadsData.map((lead) => (
             <div
               key={lead.leadID}
