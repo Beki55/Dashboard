@@ -51,7 +51,7 @@ After the installation is complete, you can start the development server:
 
 You can view the design for the EzyMetrics Dashboard in Figma by following this link:
 
-#### [EzyMetrics Dashboard Design](https://www.figma.com/design/nFAAg2svnmD92owlL0XwXr/Untitled?node-id=0-1&node-type=canvas&t=HQfePvdBytg4BMbZ-0)
+#### https://www.figma.com/design/nFAAg2svnmD92owlL0XwXr/Untitled?node-id=0-1&node-type=canvas&t=HQfePvdBytg4BMbZ-0
 
 ## Design Description
 
