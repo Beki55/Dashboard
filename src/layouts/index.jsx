@@ -12,12 +12,12 @@ const Layout = () => {
       {/* Main content */}
       <div className="flex-1 p-6 ml-0 md:ml-64"> {/* Adjust margin left for desktop */}
         <div className="flex justify-between items-center">
-          {/* <h1 className="text-2xl font-bold">EzyMetrics</h1> */}
+          <h1 className="text-2xl font-bold">EzyMetrics</h1>
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 absolute top-6 right-6"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <RxHamburgerMenu />
+            <RxHamburgerMenu className="text-2xl" />
           </button>
         </div>
         <main className="mt-4">

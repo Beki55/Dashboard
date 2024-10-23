@@ -46,3 +46,18 @@ Run the following command to install the required dependencies:
 After the installation is complete, you can start the development server:
 
 #### npm run dev
+
+# Figma Design
+
+You can view the design for the EzyMetrics Dashboard in Figma by following this link: 
+#### [EzyMetrics Dashboard Design](https://www.figma.com/design/nFAAg2svnmD92owlL0XwXr/Untitled?node-id=0-1&node-type=canvas&t=HQfePvdBytg4BMbZ-0)
+
+## Design Description
+The Figma design showcases a clean and modern interface with the following elements:
+
+## Sidebar Navigation: #### A fixed sidebar that allows users to navigate between different sections of the dashboard.
+## Metrics Cards: #### Interactive cards displaying key performance indicators, designed for quick insights.
+## Chart Sections: #### Visual data representation with charts, facilitating a better understanding of trends and performance.
+## Responsive Layout: #### The design adapts to different screen sizes, ensuring usability on both desktop and mobile devices.
+
+Feel free to explore the design and provide feedback!
