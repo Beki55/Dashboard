@@ -27,9 +27,10 @@ Follow these steps to set up the project locally on your machine:
 
 Open your terminal and run the following command to clone the repository:
 
-git clone https://github.com/YourUsername/Dashboard.git
+git clone https://github.com/Beki55/Dashboard.git
 
-Navigate to the Project Directory
+### 2. Navigate to the Project Directory
+
 Change into the project directory:
 
 #### cd EzyMetrics-Dashboard
